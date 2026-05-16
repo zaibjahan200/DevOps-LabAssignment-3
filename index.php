@@ -1,4 +1,5 @@
 <?php
+	ob_start();
 	$title="DevOps Lab Terminal";
 	$subtitle="Web Application";
 	//Set default timezone
