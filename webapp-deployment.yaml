@@ -18,7 +18,7 @@ spec:
             - "127.0.0.1"
       containers:
         - name: webapp
-          image: webapp:v1
-          imagePullPolicy: Never
+          image: zaibjahan200/webapp:v1
+          # imagePullPolicy: Never
           ports:
             - containerPort: 80

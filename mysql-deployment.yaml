@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: webapp-mysql:v1
-          imagePullPolicy: Never
+          image: zaibjahan200/webapp-mysql:v1
+          # imagePullPolicy: Never
           ports:
             - containerPort: 3306
           env:
