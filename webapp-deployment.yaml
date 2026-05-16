@@ -12,10 +12,10 @@ spec:
       labels:
         app: webapp
     spec:
-      hostAliases:
-        - ip: "127.0.0.1"
-          hostnames:
-            - "devopsterminal-db"
+      # hostAliases:
+      #   - ip: "127.0.0.1"
+      #     hostnames:
+      #       - "127.0.0.1"
       containers:
         - name: webapp
           image: zaibjahan200/webapp:v1
