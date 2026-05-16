@@ -6,7 +6,7 @@
 	//Siteroot
 	define ('siteroot','http://127.0.0.1/');
 	//Database settings
-	define('servername', '127.0.0.1:3307');
+	define('servername', 'mysql-service:3306');
 	define('username', 'root');
 	define('password', 'root');
 	define('dbname', 'devopsterminal');
