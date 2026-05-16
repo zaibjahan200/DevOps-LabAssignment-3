@@ -6,13 +6,14 @@
 	//Siteroot
 	define ('siteroot','http://127.0.0.1/');
 	//Database settings
-	define('servername', 'mysql-service:3306');
+	define('servername', 'mysql-service');
+	define('dbport', 3306);
 	define('username', 'root');
 	define('password', 'root');
 	define('dbname', 'devopsterminal');
 	// Create connection
 	global $conn;
-	$conn = new mysqli(servername, username, password, dbname);
+	$conn = new mysqli(servername, username, password, dbname, dbport);
 	// Check connection
 	if ($conn->connect_error) {
 	die("Connection to Database failed");
