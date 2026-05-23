@@ -20,15 +20,3 @@ data:
       - job_name: "apache"
         static_configs:
           - targets: ["webapp-service:9117"]
-
-  alert.rules.yml: |
-    groups:
-      - name: apache-alerts
-        rules:
-          - alert: HighTraffic
-            expr: rate(apache_accesses_total[1m]) > 10
-            for: 1m
-            labels:
-              severity: critical
-            annotations:
-              summary: "High Apache traffic detected"
