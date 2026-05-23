@@ -7,6 +7,12 @@ spec:
   selector:
     app: webapp
   ports:
-    - port: 80
+    - name: web
+      port: 80
       targetPort: 80
       nodePort: 30080
+
+    - name: apache-metrics
+      port: 9117
+      targetPort: 9117
+      nodePort: 30917

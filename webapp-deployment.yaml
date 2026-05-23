@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: webapp
 spec:
-  selector:
+   selector:
     matchLabels:
       app: webapp
   template:
@@ -11,13 +11,15 @@ spec:
       labels:
         app: webapp
     spec:
-      # hostAliases:
-      #   - ip: "127.0.0.1"
-      #     hostnames:
-      #       - "127.0.0.1"
       containers:
         - name: webapp
           image: zaibjahan200/webapp:v1
-          imagePullPolicy: Always
           ports:
             - containerPort: 80
+
+        - name: apache-exporter
+          image: lusotycoon/apache-exporter
+          args:
+            - "--scrape_uri=http://localhost/server-status?auto"
+          ports:
+            - containerPort: 9117
