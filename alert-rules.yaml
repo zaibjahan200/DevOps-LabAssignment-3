@@ -1,15 +1,10 @@
-apiVersion: monitoring.coreos.com/v1
-kind: PrometheusRule
-metadata:
-  name: apache-alerts
-spec:
-  groups:
-    - name: apache-alerts
-      rules:
-        - alert: HighTraffic
-          expr: rate(apache_accesses_total[1m]) > 10
-          for: 1m
-          labels:
-            severity: critical
-          annotations:
-            summary: "High Apache traffic detected"
+groups:
+  - name: apache-alerts
+    rules:
+      - alert: HighTraffic
+        expr: rate(apache_accesses_total[1m]) > 10
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High Apache traffic detected"
